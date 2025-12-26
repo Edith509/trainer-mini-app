@@ -1,0 +1,16 @@
+# node
+node_modules/
+backend/node_modules/
+frontend/node_modules/
+bot/node_modules/
+
+# env-файлы
+.env
+backend/.env
+frontend/.env
+bot/.env
+
+# build
+dist/
+backend/dist/
+frontend/dist/

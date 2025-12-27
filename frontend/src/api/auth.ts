@@ -10,3 +10,13 @@ export async function devLogin(telegramId: number) {
 
   return { token, user };
 }
+
+export async function telegramLogin(initData: string) {
+  const res = await api.post("/auth/telegram", { initData });
+  const { token, user } = res.data;
+
+  localStorage.setItem("token", token);
+  localStorage.setItem("user", JSON.stringify(user));
+
+  return { token, user };
+}
